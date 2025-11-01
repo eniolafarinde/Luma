@@ -1,8 +1,11 @@
-import axios from "axios";
+import axios from 'axios';
 
-const API = axios.create({
-  baseURL: "http://10.0.2.2:5000/api", // Android emulator
-  // For iOS simulator, use http://localhost:5000
-});
+const API_URL = 'http://127.0.0.1:5000/api/auth'; // Use your backend URL
 
-export default API;
+export const register = async (name, email, password) => {
+  return await axios.post(`${API_URL}/register`, { name, email, password });
+};
+
+export const login = async (email, password) => {
+  return await axios.post(`${API_URL}/login`, { email, password });
+};
