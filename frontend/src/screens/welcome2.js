@@ -6,7 +6,7 @@ const Welcome2 = ({ navigation }) => {
     <View style={styles.container}>
       <View style={styles.content}>
         <Image
-            source={require('../asset/image.png')} // "../../" goes up two levels to reach assets
+            source={require('../asset/image.png')}
             style={styles.image}
             resizeMode="contain"
         />
@@ -26,7 +26,7 @@ const Welcome2 = ({ navigation }) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#C8B6FF', // Background color
+    backgroundColor: '#C8B6FF',
     justifyContent: 'space-between',
     padding: 20,
   },
