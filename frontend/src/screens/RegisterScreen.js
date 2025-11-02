@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Alert, StyleSheet } from 'react-native';
 
 const RegisterScreen = ({ navigation, route }) => {
-  const { userName } = route.params; 
+  const { userName } = route.params;
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -18,7 +18,12 @@ const RegisterScreen = ({ navigation, route }) => {
       Alert.alert('Error', 'Passwords do not match.');
       return;
     }
+
+    // Here you can call your register API later
     console.log({ userName, email, password });
+
+    // Navigate to ReadyScreen
+    navigation.navigate('Ready', { userName, email }); 
   };
 
   return (

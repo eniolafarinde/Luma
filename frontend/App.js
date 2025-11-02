@@ -10,6 +10,12 @@ import GetStarted from './src/screens/GetStarted';
 import RegisterScreen from './src/screens/RegisterScreen';
 // import LoginScreen from './src/screens/LoginScreen';
 
+import ReadyScreen from './src/screens/ReadyScreen';
+import Dashboard from './src/screens/Dashboard';
+
+
+
+
 const Stack = createNativeStackNavigator();
 
 export default function App() {
@@ -19,7 +25,7 @@ export default function App() {
   });
 
   if (!fontsLoaded) {
-    return null; // You can also use <AppLoading /> if you want a loading screen
+    return null;
   }
 
   return (
@@ -29,6 +35,8 @@ export default function App() {
         <Stack.Screen name="Welcome2" component={Welcome2} />
         <Stack.Screen name="GetStarted" component={GetStarted} />
         <Stack.Screen name="Register" component={RegisterScreen} />
+        <Stack.Screen name="Ready" component={ReadyScreen} />
+        <Stack.Screen name="Dashboard" component={Dashboard} />
         {/* <Stack.Screen name="Login" component={LoginScreen} /> */}
       </Stack.Navigator>
     </NavigationContainer>
